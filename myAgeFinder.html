@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Finder</title>
+
+    <style>
+
+    </style>
+
+</head>
+<body>
+
+    <label for="a">Enter Your Birth Date</label>
+    <input type="date" name="a" id="" placeholder="">
+    <button>Get</button>
+    <h1></h1>
+
+
+    <script>
+
+        const inp = document.querySelector('input')
+        const btn = document.querySelector('button')
+        const h1 = document.querySelector('h1')
+
+        btn.addEventListener('click', function () {
+            const date = new Date
+
+            // console.log(inp.value);
+
+            const currentYear = inp.value.split('-')[0]
+
+            const age = date.getFullYear() - currentYear
+
+            h1.innerHTML = age
+
+        })
+
+
+    </script>
+
+</body>
+</html>

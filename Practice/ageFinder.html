@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AGE FINDER</title>
+
+    <style></style>
+  </head>
+  <body>
+    <label for="a">Enter your date of birth</label>
+    <input id="a" type="date" placeholder="date/month/year" />
+    <button>Get</button>
+    <h1></h1>
+
+    <!-- <br />
+
+    <input type="radio" id="1" name="a" />
+    <label for="1">option1</label>
+    <input type="radio" id="2" name="a" />
+    <label for="2">option2</label>
+    <input type="radio" id="3" name="a" />
+    <label for="3">option3</label>
+    <input type="radio" id="4" name="a" />
+    <label for="4">option4</label> -->
+
+    <script>
+      var inp = document.querySelector('input');
+      var btn = document.querySelector('button');
+      var h1 = document.querySelector('h1');
+
+      btn.addEventListener('click', function () {
+        var date = new Date();
+        console.log(inp.value);
+        var birthYear = inp.value.split('-')[0];
+
+        var age = date.getFullYear() - birthYear;
+        h1.innerHTML = age;
+      });
+    </script>
+  </body>
+</html>
